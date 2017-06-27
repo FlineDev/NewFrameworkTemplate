@@ -61,12 +61,12 @@ Here's a few simple steps on how you can use this project to kick-start your nex
 5. **Change** the **Bundle ID** for all targets and the **Development Team** for macOS
 6. Run `carthage update --cache-builds` (via [Carthage](https://github.com/Carthage/Carthage))
 7. **Update** the `Package.swift`, `Cartfile`, `.podspec` & `bitrise.yml` with your content
-9. **Update** the files `README.md` and `Logo.png` from the root directory
+8. **Update** the files `README.md` and `Logo.png` from the root directory
 
 Additional options you probably want to check:
 
-10. Configure the **minimum deployment targets** (the latest by default)
-11. Set the **project Organization** on the right pane (Flinesoft by default)
+9. Configure the **minimum deployment targets** (the latest by default)
+10. Set the **project Organization** on the right pane (Flinesoft by default)
 
 That's it! Start coding. 🎉 😊
 
