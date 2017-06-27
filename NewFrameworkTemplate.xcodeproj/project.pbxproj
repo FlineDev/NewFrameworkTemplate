@@ -111,6 +111,7 @@
 		A102BDD51F023CAA000C6B38 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		A102BDFE1F023E13000C6B38 /* NewFrameworkTemplate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewFrameworkTemplate.h; sourceTree = "<group>"; };
 		A15AD1201F0240C9004D7ED3 /* NewFrameworkTemplate.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = NewFrameworkTemplate.podspec; sourceTree = "<group>"; };
+		A15AD1211F02447E004D7ED3 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +264,7 @@
 		A102BDB61F023A6D000C6B38 /* Root Files */ = {
 			isa = PBXGroup;
 			children = (
+				A15AD1211F02447E004D7ED3 /* Package.swift */,
 				A102BDB71F023A7D000C6B38 /* Cartfile */,
 				A102BDB81F023A8A000C6B38 /* Cartfile.private */,
 				A102BDB91F023A9A000C6B38 /* Cartfile.resolved */,

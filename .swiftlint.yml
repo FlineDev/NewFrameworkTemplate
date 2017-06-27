@@ -21,6 +21,7 @@ opt_in_rules:
 included:
 - Sources
 - Tests
+- Package.swift
 
 excluded:
 - Carthage
@@ -36,6 +37,9 @@ file_header:
                     \/\/  Created by [\S ]+ on \d{1,2}\.\d{1,2}\.\d{2}\.
                     \/\/  Copyright © \d{4} [\S ]+\. All rights reserved\.
                     \/\/
+
+trailing_comma:
+  mandatory_comma: true
 
 custom_rules:
   closing_brace_whitespace:
