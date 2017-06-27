@@ -54,19 +54,18 @@ Specifically this is what "battries included" currently means:
 
 Here's a few simple steps on how you can use this project to kick-start your next project:
 
-1. Create a new **empty git repository**
-2. **Copy** all files from this repo (including hidden ones) to your repo
-3. **Configure git-flow** with `productive`, `stable`, `work/` and `deploy/`
-4. **Rename the project** (top most entry in the Xcode file navigator) and the **scheme**
-5. **Change** the **Bundle ID** for all targets and the **Development Team** for macOS
-6. Run `carthage update --cache-builds` (via [Carthage](https://github.com/Carthage/Carthage))
-7. **Update** the `Package.swift`, `Cartfile`, `.podspec` & `bitrise.yml` with your content
-8. **Update** the files `README.md` and `Logo.png` from the root directory
+1. **Download** this repo as a **ZIP file** right from GitHub
+2. Unzip, rename the folder & initialize a new **git repository** inside of it
+3. **Rename the project** (top most entry in the Xcode file navigator) and the **schemes**
+4. **Change** the **Bundle ID** & **Product Name** for all targets and the **Development Team** for macOS
+5. Run `carthage update --cache-builds` (via [Carthage](https://github.com/Carthage/Carthage))
+6. **Update** the `Package.swift`, `Cartfile`, `.podspec` & `bitrise.yml` with your content
+7. **Update** the files `README.md` and `Logo.png` from the root directory
 
 Additional options you probably want to check:
 
-9. Configure the **minimum deployment targets** (the latest by default)
-10. Set the **project Organization** on the right pane (Flinesoft by default)
+8. Configure the **minimum deployment targets** (the latest by default)
+9. Set the **project Organization** on the right pane (Flinesoft by default)
 
 That's it! Start coding. 🎉 😊
 

@@ -1,5 +1,5 @@
 //
-//  NewFrameworkTemplateTests.swift
+//  ExampleTests.swift
 //  NewFrameworkTemplateTests
 //
 //  Created by Cihat Gündüz on 27.06.17.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import NewFrameworkTemplate
 
-class NewFrameworkTemplateTests: XCTestCase {
+class ExampleTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
