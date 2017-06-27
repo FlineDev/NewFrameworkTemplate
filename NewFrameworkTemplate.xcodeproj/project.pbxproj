@@ -19,6 +19,10 @@
 		A102BDD21F023C7D000C6B38 /* Quick.framework in Carthage */ = {isa = PBXBuildFile; fileRef = A102BDCC1F023C4A000C6B38 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A102BDD31F023C81000C6B38 /* Nimble.framework in Carthage */ = {isa = PBXBuildFile; fileRef = A102BDC91F023C3E000C6B38 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A102BDD41F023C81000C6B38 /* Quick.framework in Carthage */ = {isa = PBXBuildFile; fileRef = A102BDCA1F023C3E000C6B38 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A102BDFF1F023E32000C6B38 /* NewFrameworkTemplate.h in Headers */ = {isa = PBXBuildFile; fileRef = A102BDFE1F023E13000C6B38 /* NewFrameworkTemplate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A102BE001F023E33000C6B38 /* NewFrameworkTemplate.h in Headers */ = {isa = PBXBuildFile; fileRef = A102BDFE1F023E13000C6B38 /* NewFrameworkTemplate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A102BE011F023E33000C6B38 /* NewFrameworkTemplate.h in Headers */ = {isa = PBXBuildFile; fileRef = A102BDFE1F023E13000C6B38 /* NewFrameworkTemplate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A102BE021F023E34000C6B38 /* NewFrameworkTemplate.h in Headers */ = {isa = PBXBuildFile; fileRef = A102BDFE1F023E13000C6B38 /* NewFrameworkTemplate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,11 +90,11 @@
 
 /* Begin PBXFileReference section */
 		A102BD3E1F02355A000C6B38 /* NewFrameworkTemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NewFrameworkTemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A102BD471F02355A000C6B38 /* NewFrameworkTemplate_iOS_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewFrameworkTemplate_iOS_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A102BD471F02355A000C6B38 /* NewFrameworkTemplate-iOS-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NewFrameworkTemplate-iOS-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A102BD5D1F023573000C6B38 /* NewFrameworkTemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NewFrameworkTemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A102BD651F023573000C6B38 /* NewFrameworkTemplate_macOS_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewFrameworkTemplate_macOS_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A102BD651F023573000C6B38 /* NewFrameworkTemplate-macOS-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NewFrameworkTemplate-macOS-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A102BD791F023582000C6B38 /* NewFrameworkTemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NewFrameworkTemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A102BD811F023582000C6B38 /* NewFrameworkTemplate_tvOS_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewFrameworkTemplate_tvOS_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A102BD811F023582000C6B38 /* NewFrameworkTemplate-tvOS-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NewFrameworkTemplate-tvOS-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A102BD951F02358E000C6B38 /* NewFrameworkTemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NewFrameworkTemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A102BDA31F02387A000C6B38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A102BDB01F0238BD000C6B38 /* NewFrameworkTemplateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFrameworkTemplateTests.swift; sourceTree = "<group>"; };
@@ -104,6 +108,8 @@
 		A102BDCC1F023C4A000C6B38 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
 		A102BDCD1F023C51000C6B38 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/tvOS/Quick.framework; sourceTree = "<group>"; };
 		A102BDCE1F023C52000C6B38 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/tvOS/Nimble.framework; sourceTree = "<group>"; };
+		A102BDD51F023CAA000C6B38 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		A102BDFE1F023E13000C6B38 /* NewFrameworkTemplate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewFrameworkTemplate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,11 +183,11 @@
 			isa = PBXGroup;
 			children = (
 				A102BD3E1F02355A000C6B38 /* NewFrameworkTemplate.framework */,
-				A102BD471F02355A000C6B38 /* NewFrameworkTemplate_iOS_Tests.xctest */,
+				A102BD471F02355A000C6B38 /* NewFrameworkTemplate-iOS-Tests.xctest */,
 				A102BD5D1F023573000C6B38 /* NewFrameworkTemplate.framework */,
-				A102BD651F023573000C6B38 /* NewFrameworkTemplate_macOS_Tests.xctest */,
+				A102BD651F023573000C6B38 /* NewFrameworkTemplate-macOS-Tests.xctest */,
 				A102BD791F023582000C6B38 /* NewFrameworkTemplate.framework */,
-				A102BD811F023582000C6B38 /* NewFrameworkTemplate_tvOS_Tests.xctest */,
+				A102BD811F023582000C6B38 /* NewFrameworkTemplate-tvOS-Tests.xctest */,
 				A102BD951F02358E000C6B38 /* NewFrameworkTemplate.framework */,
 			);
 			name = Products;
@@ -215,6 +221,7 @@
 		A102BDA21F02387A000C6B38 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A102BDFE1F023E13000C6B38 /* NewFrameworkTemplate.h */,
 				A102BDA31F02387A000C6B38 /* Info.plist */,
 			);
 			path = "Supporting Files";
@@ -258,6 +265,7 @@
 				A102BDB71F023A7D000C6B38 /* Cartfile */,
 				A102BDB81F023A8A000C6B38 /* Cartfile.private */,
 				A102BDB91F023A9A000C6B38 /* Cartfile.resolved */,
+				A102BDD51F023CAA000C6B38 /* .swiftlint.yml */,
 			);
 			name = "Root Files";
 			sourceTree = "<group>";
@@ -354,6 +362,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A102BDFF1F023E32000C6B38 /* NewFrameworkTemplate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +370,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A102BE001F023E33000C6B38 /* NewFrameworkTemplate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +378,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A102BE011F023E33000C6B38 /* NewFrameworkTemplate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +386,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A102BE021F023E34000C6B38 /* NewFrameworkTemplate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +401,7 @@
 				A102BD3A1F02355A000C6B38 /* Frameworks */,
 				A102BD3B1F02355A000C6B38 /* Headers */,
 				A102BD3C1F02355A000C6B38 /* Resources */,
+				A102BDD61F023D4A000C6B38 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -415,7 +428,7 @@
 			);
 			name = "NewFrameworkTemplate iOS Tests";
 			productName = NewFrameworkTemplateTests;
-			productReference = A102BD471F02355A000C6B38 /* NewFrameworkTemplate_iOS_Tests.xctest */;
+			productReference = A102BD471F02355A000C6B38 /* NewFrameworkTemplate-iOS-Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		A102BD5C1F023573000C6B38 /* NewFrameworkTemplate macOS */ = {
@@ -426,6 +439,7 @@
 				A102BD591F023573000C6B38 /* Frameworks */,
 				A102BD5A1F023573000C6B38 /* Headers */,
 				A102BD5B1F023573000C6B38 /* Resources */,
+				A102BDD71F023D5B000C6B38 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -452,7 +466,7 @@
 			);
 			name = "NewFrameworkTemplate macOS Tests";
 			productName = "NewFrameworkTemplate macOSTests";
-			productReference = A102BD651F023573000C6B38 /* NewFrameworkTemplate_macOS_Tests.xctest */;
+			productReference = A102BD651F023573000C6B38 /* NewFrameworkTemplate-macOS-Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		A102BD781F023582000C6B38 /* NewFrameworkTemplate tvOS */ = {
@@ -463,6 +477,7 @@
 				A102BD751F023582000C6B38 /* Frameworks */,
 				A102BD761F023582000C6B38 /* Headers */,
 				A102BD771F023582000C6B38 /* Resources */,
+				A102BDD81F023D6C000C6B38 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -489,7 +504,7 @@
 			);
 			name = "NewFrameworkTemplate tvOS Tests";
 			productName = "NewFrameworkTemplate tvOSTests";
-			productReference = A102BD811F023582000C6B38 /* NewFrameworkTemplate_tvOS_Tests.xctest */;
+			productReference = A102BD811F023582000C6B38 /* NewFrameworkTemplate-tvOS-Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		A102BD941F02358E000C6B38 /* NewFrameworkTemplate watchOS */ = {
@@ -500,6 +515,7 @@
 				A102BD911F02358E000C6B38 /* Frameworks */,
 				A102BD921F02358E000C6B38 /* Headers */,
 				A102BD931F02358E000C6B38 /* Resources */,
+				A102BDD91F023D80000C6B38 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -617,6 +633,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A102BDD61F023D4A000C6B38 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"${CONFIGURATION}\" = \"Debug\" ]; then\n    if which swiftlint > /dev/null; then\n        swiftlint\n    else\n        echo \"SwiftLint not installed, download it from https://github.com/realm/SwiftLint\"\n    fi\nfi";
+		};
+		A102BDD71F023D5B000C6B38 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"${CONFIGURATION}\" = \"Debug\" ]; then\n    if which swiftlint > /dev/null; then\n        swiftlint\n    else\n        echo \"SwiftLint not installed, download it from https://github.com/realm/SwiftLint\"\n    fi\nfi";
+		};
+		A102BDD81F023D6C000C6B38 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"${CONFIGURATION}\" = \"Debug\" ]; then\n    if which swiftlint > /dev/null; then\n        swiftlint\n    else\n        echo \"SwiftLint not installed, download it from https://github.com/realm/SwiftLint\"\n    fi\nfi";
+		};
+		A102BDD91F023D80000C6B38 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"${CONFIGURATION}\" = \"Debug\" ]; then\n    if which swiftlint > /dev/null; then\n        swiftlint\n    else\n        echo \"SwiftLint not installed, download it from https://github.com/realm/SwiftLint\"\n    fi\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A102BD391F02355A000C6B38 /* Sources */ = {
@@ -849,8 +924,8 @@
 				DEVELOPMENT_TEAM = 767S6EFMJ8;
 				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.flinesoft.$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.flinesoft.$(TARGET_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:rfc1034identifier)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -862,8 +937,8 @@
 				DEVELOPMENT_TEAM = 767S6EFMJ8;
 				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.flinesoft.$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.flinesoft.$(TARGET_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:rfc1034identifier)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -914,8 +989,8 @@
 				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.flinesoft.$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.flinesoft.$(TARGET_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:rfc1034identifier)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 4.0;
 			};
@@ -930,8 +1005,8 @@
 				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.flinesoft.$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.flinesoft.$(TARGET_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:rfc1034identifier)";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 4.0;
 			};
@@ -979,8 +1054,8 @@
 				DEVELOPMENT_TEAM = 767S6EFMJ8;
 				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.flinesoft.$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.flinesoft.$(TARGET_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:rfc1034identifier)";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -994,8 +1069,8 @@
 				DEVELOPMENT_TEAM = 767S6EFMJ8;
 				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.flinesoft.$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.flinesoft.$(TARGET_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:rfc1034identifier)";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
