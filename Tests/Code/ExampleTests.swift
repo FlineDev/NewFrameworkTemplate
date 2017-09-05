@@ -6,8 +6,8 @@
 //  Copyright © 2017 Flinesoft. All rights reserved.
 //
 
-import XCTest
 @testable import NewFrameworkTemplate
+import XCTest
 
 class ExampleTests: XCTestCase {
     override func setUp() {
