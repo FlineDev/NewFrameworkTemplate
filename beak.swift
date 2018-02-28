@@ -29,7 +29,10 @@ private func renameProject(from oldName: String, to newName: String) throws {
     filesToReplaceContent += supportedPlatforms.map { Path(oldName + ".xcodeproj/xcshareddata/xcschemes/\(oldName) \($0).xcscheme") }
     filesToReplaceContent += Path.glob("Sources/**/*.swift")
     filesToReplaceContent += Path.glob("Tests/**/*.swift")
-    filesToReplaceContent += ["README.md", "Package.swift", "Sources/Supporting Files/\(oldName).h", "UsageExamples.playground/Contents.swift"].map { Path($0) }
+    filesToReplaceContent += [
+        "README.md", "Package.swift", "Sources/Supporting Files/\(oldName).h", "UsageExamples.playground/Contents.swift",
+        "\(oldName).xcworkspace/contents.xcworkspacedata"
+    ].map { Path($0) }
 
     try filesToReplaceContent.forEach { swiftFilePath in
         try replaceInFile(fileUrl: swiftFilePath.url, regex: try Regex(string: oldName), replacement: newName)
