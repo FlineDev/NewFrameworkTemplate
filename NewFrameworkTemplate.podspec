@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "NewFrameworkTemplate"
-  s.version      = "1.0.0"
+  s.version      = "0.1.0"
   s.summary      = "A template for new framework projects."
 
   s.description  = <<-DESC
@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/Flinesoft/NewFrameworkTemplate"
   s.license      = { :type => "MIT", :file => "LICENSE.md" }
 
-  s.author             = { "Cihat Gündüz" => "CihatGuenduez@posteo.de" }
+  s.author             = { "Cihat Gündüz" => "cocoapods@cihtaguenduez.de" }
   s.social_media_url   = "https://twitter.com/Dschee"
 
   s.ios.deployment_target = "11.0"
@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   s.source_files = "Sources", "Sources/**/*.swift"
   s.framework    = "Foundation"
 
-  # s.dependency "HandyUIKit", "~> 1.4"
-  # s.dependency "HandySwift", "~> 2.3"
+  # s.dependency "HandyUIKit", "~> 1.6"
+  # s.dependency "HandySwift", "~> 2.5"
 
 end
