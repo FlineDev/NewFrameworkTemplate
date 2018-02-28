@@ -161,18 +161,6 @@ private func pbxProjectFileContent() throws -> String {
     return try pbxProjectFilePath().read(.utf8)
 }
 
-private func appFrameworks() throws -> [Framework] {
-    let frameworkInfoRegex = Regex("\\s*(\\S{24}) \\/\\* ([^\\*]+) \\*\\/,")
-
-    let appFrameworksRegex = Regex("823F74231ED863520022317D \\/\\* App \\*\\/ = \\{\\s*isa = PBXGroup;[^\\(]*children = \\(((?:\\s*\\S{24} \\/\\* [^\\*]+ \\*\\/,)*)")
-    let appFrameworksContent = appFrameworksRegex.firstMatch(in: try pbxProjectFileContent())!.captures.first!!
-    return frameworkInfoRegex.allMatches(in: appFrameworksContent).map { (identifier: $0.captures[0]!, name: $0.captures[1]!) }
-}
-
-private func newFrameworkCopyContent(frameworks: [Framework]) throws -> String {
-    return "\n" + frameworks.map { "\t\t\t\t\"$(SRCROOT)/Carthage/Build/iOS/\($0.name)\"," }.joined(separator: "\n")
-}
-
 private struct CartfileEntry: CustomStringConvertible {
     let commentLine: String?
     let dependencyDefinitionLine: String
@@ -213,20 +201,9 @@ public func addDependency(github githubSubpath: String, version: String = "lates
     try sortCartfile()
     try updateDependencies()
 
-    print("Please add the new frameworks to your projects 'Carthage >> App' group in the project navigator, then run the following command:", level: .warning)
-    print("beak run synchronizeDependencies", level: .warning)
+    print("Please add the new frameworks to your projects 'Carthage >> Framework' groups related platforms in the project navigator.", level: .warning)
 
     run(bash: "open -a Finder Carthage/Build/")
-}
-
-/// Synchronizes dependencies in project navigator and other places in the project file.
-public func synchronizeDependencies() throws {
-    let appTargetFrameworks = try appFrameworks()
-
-    let frameworkCopyRegex = Regex("823F74211ED8633F0022317D \\/\\* Carthage \\*\\/ = \\{[^\\(]*\\(\\s*\\)\\;\\s*inputPaths = \\(((?:\\s*.\\$\\(SRCROOT\\)[^\\)\\s]*)*)\\s*\\)\\;")
-    let frameworkCopyContent = frameworkCopyRegex.firstMatch(in: try pbxProjectFileContent())!.captures.first!!
-    let newContent = try newFrameworkCopyContent(frameworks: appTargetFrameworks)
-    try replaceInFile(fileUrl: pbxProjectFilePath().url, substring: frameworkCopyContent, replacement: newContent)
 }
 
 /// Sorts the contents of Cartfile and Cartfile.private.
