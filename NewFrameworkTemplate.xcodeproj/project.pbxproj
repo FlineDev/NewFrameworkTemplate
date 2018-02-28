@@ -91,6 +91,7 @@
 /* Begin PBXFileReference section */
 		0085921F2046DF1E00AB529F /* Brewfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Brewfile; sourceTree = "<group>"; };
 		008592202046E1D400AB529F /* README.md.sample */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md.sample; sourceTree = "<group>"; };
+		0085926E2046FD1B00AB529F /* beak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beak.swift; sourceTree = "<group>"; };
 		A102BD3E1F02355A000C6B38 /* NewFrameworkTemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NewFrameworkTemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A102BD471F02355A000C6B38 /* NewFrameworkTemplate-iOS-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NewFrameworkTemplate-iOS-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A102BD5D1F023573000C6B38 /* NewFrameworkTemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NewFrameworkTemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -269,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				A102BDD51F023CAA000C6B38 /* .swiftlint.yml */,
+				0085926E2046FD1B00AB529F /* beak.swift */,
 				0085921F2046DF1E00AB529F /* Brewfile */,
 				A102BDB71F023A7D000C6B38 /* Cartfile */,
 				A102BDB81F023A8A000C6B38 /* Cartfile.private */,
