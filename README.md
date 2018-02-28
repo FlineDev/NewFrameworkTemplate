@@ -48,87 +48,24 @@ Specifically this is what "battries included" currently means:
 - Support for [Carthage](https://github.com/Carthage/Carthage), [CocoaPods](https://github.com/CocoaPods/CocoaPods) and [Swift Package Manager](https://github.com/apple/swift-package-manager) is setup
 - A `README.md` file is setup with appropriate sections
 - A `LICENSE.md` file is setup with MIT license preconfigured
-- The resources are structured according to [these](https://jamitlabs.github.io/BestPractices/de/articles/AP010-0200.html) best practices
 
-## Installation
+## Getting Started
 
-Here's a few simple steps on how you can use this project to kick-start your next project:
+Here's a few simple steps on how you can use this project to kick-start your next framework project:
 
-1. **Download** this repo as a **ZIP file** right from GitHub
-2. Unzip, rename the folder & initialize a new **git repository** inside of it
-3. **Rename the project** (top most entry in the Xcode file navigator) and the **schemes**
-4. **Change** the **Bundle ID** & **Product Name** for all targets and the **Development Team** for macOS
-5. Run `carthage update --cache-builds` (via [Carthage](https://github.com/Carthage/Carthage))
-6. **Update** the `Package.swift`, `Cartfile`, `.podspec` & `bitrise.yml` with your content
-7. **Update** the files `README.md` and `Logo.png` from the root directory
+1. **Clone this repo** to your own Git server / GitHub fork
+2. **Configure git-flow** with `productive`, `stable`, `work/` and `deploy/`
+3. Run `brew bundle` in the command line and wait for **tools to be installed**
+4. Run `beak run initialize --frameworkName YourFrameworkName` to **initialize the project**
+5. Set the the **Development Team** to yours (at least in the test targets)
+6. Set the **project organization** on the right pane (Flinesoft by default)
 
 Additional options you probably want to check:
 
-8. Configure the **minimum deployment targets** (the latest by default)
-9. Set the **project Organization** on the right pane (Flinesoft by default)
+7. **Remove the targets and schemes** you are not planning to develop for (all Apple platforms by default)
+8. Configure the **minimum deployment target** per target (the latest major version by default)
 
 That's it! Start coding. 🎉 😊
-
-Note that the following two sections about Carthage and CocoaPods are only included in this README so you can reuse them in your framework. There's no installation via Carthage/CocoaPods needed (or possible) to use this repo to kick-start your own framework.
-
-### Carthage
-
-Place the following line to your Cartfile:
-
-``` Swift
-github "Flinesoft/NewFrameworkTemplate" ~> 1.0
-```
-
-Now run `carthage update`. Then drag & drop the NewFrameworkTemplate.framework in the Carthage/Build folder to your project. Now you can `import NewFrameworkTemplate` in each class you want to use its features. Refer to the [Carthage README](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application) for detailed / updated instructions.
-
-### CocoaPods
-
-Add the line `pod 'NewFrameworkTemplate'` to your target in your `Podfile` and make sure to include `use_frameworks!`
-at the top. The result might look similar to this:
-
-``` Ruby
-platform :ios, '8.0'
-use_frameworks!
-
-target 'MyAppTarget' do
-    pod 'NewFrameworkTemplate', '~> 1.0'
-end
-```
-
-Now close your project and run `pod install` from the command line. Then open the `.xcworkspace` from within your project folder.
-Build your project once (with `Cmd+B`) to update the frameworks known to Xcode. Now you can `import NewFrameworkTemplate` in each class you want to use its features.
-Refer to [CocoaPods.org](https://cocoapods.org) for detailed / updates instructions.
-
-## Usage
-
-Please have a look at the UsageExamples.playground for a complete list of features provided.
-Open the Playground from within the `.xcworkspace` in order for it to work.
-
----
-#### Features Overview
-
-- [Short Section](#short-section)
-- Sections Group
-  - [SubSection1](#subsection1)
-  - [SubSection2](#subsection2)
-
----
-
-### Short Section
-
-TODO: Add some usage information here.
-
-### Sections Group
-
-TODO: Summarize the section here.
-
-#### SubSection1
-
-TODO: Add some usage information here.
-
-#### SubSection2
-
-TODO: Add some usage information here.
 
 
 ## Contributing
