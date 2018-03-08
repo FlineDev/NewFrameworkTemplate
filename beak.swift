@@ -177,7 +177,7 @@ private struct CartfileEntry: CustomStringConvertible {
 // MARK: - Tasks
 /// Initializes the project with the given info.
 public func initialize(frameworkName: String) throws {
-    try ["README.md", "LICENSE.md", "Logo.png"].forEach { try deleteFile($0) }
+    try ["README.md", "Logo.png"].forEach { try deleteFile($0) }
     try runAndPrint(bash: "mv README.md.sample README.md")
     try renameProject(from: "NewFrameworkTemplate", to: frameworkName)
     try installDependencies()

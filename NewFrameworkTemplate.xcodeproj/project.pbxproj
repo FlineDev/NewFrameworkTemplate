@@ -90,7 +90,6 @@
 
 /* Begin PBXFileReference section */
 		0085921F2046DF1E00AB529F /* Brewfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Brewfile; sourceTree = "<group>"; };
-		008592202046E1D400AB529F /* README.md.sample */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md.sample; sourceTree = "<group>"; };
 		0085926E2046FD1B00AB529F /* beak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beak.swift; sourceTree = "<group>"; };
 		A102BD3E1F02355A000C6B38 /* NewFrameworkTemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NewFrameworkTemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A102BD471F02355A000C6B38 /* NewFrameworkTemplate-iOS-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NewFrameworkTemplate-iOS-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,7 +114,6 @@
 		A102BDFE1F023E13000C6B38 /* NewFrameworkTemplate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewFrameworkTemplate.h; sourceTree = "<group>"; };
 		A15AD1201F0240C9004D7ED3 /* NewFrameworkTemplate.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = NewFrameworkTemplate.podspec; sourceTree = "<group>"; };
 		A15AD1211F02447E004D7ED3 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		A15AD1231F024969004D7ED3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A15AD1241F0262D1004D7ED3 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -178,9 +176,9 @@
 		A102BD341F02355A000C6B38 = {
 			isa = PBXGroup;
 			children = (
-				A102BDB61F023A6D000C6B38 /* Root Files */,
 				A102BD9D1F02387A000C6B38 /* Sources */,
 				A102BDAE1F0238BD000C6B38 /* Tests */,
+				A102BDB61F023A6D000C6B38 /* Root Files */,
 				A102BDBA1F023B06000C6B38 /* Carthage */,
 				A102BD3F1F02355A000C6B38 /* Products */,
 			);
@@ -203,9 +201,9 @@
 		A102BD9D1F02387A000C6B38 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				A102BD9E1F02387A000C6B38 /* Assets */,
 				A102BDA01F02387A000C6B38 /* Code */,
 				A102BDA51F02387A000C6B38 /* User Interface */,
-				A102BD9E1F02387A000C6B38 /* Assets */,
 				A102BDA21F02387A000C6B38 /* Supporting Files */,
 			);
 			path = Sources;
@@ -278,8 +276,6 @@
 				A15AD1241F0262D1004D7ED3 /* LICENSE.md */,
 				A15AD1201F0240C9004D7ED3 /* NewFrameworkTemplate.podspec */,
 				A15AD1211F02447E004D7ED3 /* Package.swift */,
-				A15AD1231F024969004D7ED3 /* README.md */,
-				008592202046E1D400AB529F /* README.md.sample */,
 			);
 			name = "Root Files";
 			sourceTree = "<group>";
