@@ -44,9 +44,6 @@ line_length: 160
 file_header:
   required_pattern: |
                     \/\/
-                    \/\/  .*?\.swift
-                    \/\/  [\S ]+(?:Tests)?
-                    \/\/
                     \/\/  Created by [^\(\)\d\n]+ on \S{6,10}\.
                     \/\/  Copyright © \d{4} [\S ]+\. All rights reserved\.
                     \/\/

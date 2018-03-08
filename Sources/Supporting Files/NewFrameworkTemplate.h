@@ -1,7 +1,4 @@
 //
-//  NewFrameworkTemplate.h
-//  NewFrameworkTemplate
-//
 //  Created by Cihat Gündüz on 27.06.17.
 //  Copyright © 2017 Flinesoft. All rights reserved.
 //
