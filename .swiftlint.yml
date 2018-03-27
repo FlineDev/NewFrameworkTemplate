@@ -60,6 +60,24 @@ custom_rules:
     name: "Unnecessary Closure Params Parantheses"
     message: "Don't use parantheses around non-typed parameters in a closure."
     severity: warning
+  empty_init_body:
+    included: ".*.swift"
+    regex: 'init\([^\{\n]*\) \{\s+\}'
+    name: "Empty Init Body"
+    message: "Don't use whitespace or newlines for the body of empty initializers – use `init() {}` instead."
+    severity: warning
+  empty_method:
+    included: ".*.swift"
+    regex: 'func [^\s\(]+\([^\{\n]*\) \{\s*\}'
+    name: "Empty Method"
+    message: "Don't keep empty methods in code without commenting inside why they are needed or a `// TODO: not yet implemented`."
+    severity: warning
+  empty_type:
+    included: ".*.swift"
+    regex: '(?:class|protocol|struct|enum) [^\{]+\{\s*\}'
+    name: "Empty Type"
+    message: "Don't keep empty types in code without commenting inside why they are needed or a `// TODO: not yet implemented`."
+    severity: warning
   if_as_guard:
     included: ".*.swift"
     regex: '\n *if [^\{]+\{\s*return\s*(?:nil){0,1}([^a-zA-z\n]*)\n*\s*\}(?! *else)'
