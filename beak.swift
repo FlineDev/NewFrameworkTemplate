@@ -74,7 +74,7 @@ private func renameOrganization(from oldName: String, to newName: String, projec
     // replace reversed URl appearances
     let reversedUrlRegex = try Regex(string: "com.\(oldNameWithoutWhitespaces.lowercased())")
     try filesToReplaceContent.forEach { swiftFilePath in
-        try replaceInFile(fileUrl: swiftFilePath.url, regex: reversedUrlRegex, replacement: "com.\(newNameWithoutWhitespaces.lowercased())/")
+        try replaceInFile(fileUrl: swiftFilePath.url, regex: reversedUrlRegex, replacement: "com.\(newNameWithoutWhitespaces.lowercased())")
     }
 
     // replace other
