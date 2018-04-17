@@ -49,20 +49,27 @@ Specifically this is what "battries included" currently means:
 - A `README.md` file is setup with appropriate sections
 - A `LICENSE.md` file is setup with MIT license preconfigured
 
+## Prerequisites
+
+To use this framework, you need to install a few tools:
+
+- [Homebrew](https://brew.sh): `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+- [Beak](https://github.com/yonaskolb/Beak): `brew tap yonaskolb/Beak https://github.com/yonaskolb/Beak.git && brew install Beak`
+- [Carthage](https://github.com/Carthage/Carthage): `brew install carthage`
+- [SwiftLint](https://github.com/realm/SwiftLint): `brew install swiftlint`
+
+
 ## Getting Started
 
 Here's a few simple steps on how you can use this project to kick-start your next framework project:
 
-1. **Clone this repo** to your own Git server / GitHub fork
-2. **Configure git-flow** with `productive`, `stable`, `work/` and `deploy/`
-3. Run `brew bundle` in the command line and wait for **tools to be installed**
-4. Run `beak run initialize --frameworkName YourFrameworkName` to **initialize the project**
-5. Set the the **Development Team** to yours (at least in the test targets)
-6. Set the **project organization** on the right pane (Flinesoft by default)
+1. **Clone this repo** to your own Git server or **download as ZIP file** (beware)
+2. Run `beak run initialize --frameworkName YourFrameworkName --organization "Your Organization"` to **initialize the project**
+3. Set the the **Development Team** to yours (at least in the test targets)
 
 Additional options you probably want to check:
 
-7. **Remove the targets and schemes** you are not planning to develop for (all Apple platforms by default)
+7. **Remove the targets and schemes** you are not planning to develop for (all Apple platforms supported by default)
 8. Configure the **minimum deployment target** per target (the latest major version by default)
 
 That's it! Start coding. 🎉 😊
