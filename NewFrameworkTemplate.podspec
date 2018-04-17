@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   s.name         = "NewFrameworkTemplate"
   s.version      = "0.1.0"
-  s.summary      = "A template for new framework projects."
+  s.summary      = "TODO: write short framework description"
 
   s.description  = <<-DESC
     This project encapsulates preconfigured framework targets, Swiftlint configuration, multiple dependency manager
@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/Flinesoft/NewFrameworkTemplate"
   s.license      = { :type => "MIT", :file => "LICENSE.md" }
 
-  s.author             = { "Cihat Gündüz" => "cocoapods@cihtaguenduez.de" }
+  s.author             = { "Cihat Gündüz" => "cocoapods@cihatguenduez.de" }
   s.social_media_url   = "https://twitter.com/Dschee"
 
   s.ios.deployment_target = "11.0"

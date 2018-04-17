@@ -66,11 +66,12 @@ Here's a few simple steps on how you can use this project to kick-start your nex
 1. **Clone this repo** to your own Git server or **download as ZIP file** (beware)
 2. Run `beak run initialize --frameworkName YourFrameworkName --organization "Your Organization"` to **initialize the project**
 3. Set the the **Development Team** to yours (at least in the test targets)
+4. Update the **author and social_media_url** entires in the .podspec file
 
 Additional options you probably want to check:
 
-7. **Remove the targets and schemes** you are not planning to develop for (all Apple platforms supported by default)
-8. Configure the **minimum deployment target** per target (the latest major version by default)
+5. **Remove the targets and schemes** you are not planning to develop for (all Apple platforms supported by default)
+6. Configure the **minimum deployment target** per target (the latest major version by default)
 
 That's it! Start coding. 🎉 😊
 

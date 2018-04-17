@@ -1,7 +1,7 @@
 // beak: kareman/SwiftShell @ .upToNextMajor(from: "4.0.1")
 // beak: sharplet/Regex @ .upToNextMajor(from: "1.1.0")
-// beak: kylef/PathKit @ .upToNextMajor(from: "0.9.0")
-// beak: onevcat/Rainbow @ .upToNextMajor(from: "3.0.3")
+// beak: kylef/PathKit @ .upToNextMajor(from: "0.9.1")
+// beak: onevcat/Rainbow @ .upToNextMajor(from: "3.1.2")
 // beak: Flinesoft/HandySwift @ .upToNextMajor(from: "2.5.0")
 
 import HandySwift
@@ -31,7 +31,7 @@ private func renameProject(from oldName: String, to newName: String) throws {
     filesToReplaceContent += Path.glob("Tests/**/*.swift")
     filesToReplaceContent += [
         "README.md", "Package.swift", "Sources/Supporting Files/\(oldName).h", "UsageExamples.playground/Contents.swift",
-        "\(oldName).xcworkspace/contents.xcworkspacedata"
+        "\(oldName).xcworkspace/contents.xcworkspacedata", "\(oldName).podspec"
     ].map { Path($0) }
 
     try filesToReplaceContent.forEach { swiftFilePath in
@@ -48,6 +48,39 @@ private func renameProject(from oldName: String, to newName: String) throws {
     try runAndPrint(bash: "mv \(oldName).xcworkspace/ \(newName).xcworkspace/")
     try runAndPrint(bash: "mv \(oldName).podspec \(newName).podspec")
     try runAndPrint(bash: "mv Sources/Supporting\\ Files/\(oldName).h Sources/Supporting\\ Files/\(newName).h")
+}
+
+private func renameOrganization(from oldName: String, to newName: String, projectName: String) throws {
+    var filesToReplaceContent: [Path] = [
+        Path("LICENSE.md"),
+        Path("README.md"),
+        Path("\(projectName).podspec"),
+        Path("\(projectName).xcodeproj/project.pbxproj"),
+        Path("Sources/Supporting Files/\(projectName).h")
+    ]
+
+    filesToReplaceContent += Path.glob("Sources/**/*.swift")
+    filesToReplaceContent += Path.glob("Tests/**/*.swift")
+
+    // replace normal URL appearances
+    let oldNameWithoutWhitespaces = oldName.components(separatedBy: .whitespaces).joined()
+    let newNameWithoutWhitespaces = newName.components(separatedBy: .whitespaces).joined()
+
+    let urlRegex = try Regex(string: "\(oldNameWithoutWhitespaces)/")
+    try filesToReplaceContent.forEach { swiftFilePath in
+        try replaceInFile(fileUrl: swiftFilePath.url, regex: urlRegex, replacement: "\(newNameWithoutWhitespaces)/")
+    }
+
+    // replace reversed URl appearances
+    let reversedUrlRegex = try Regex(string: "com.\(oldNameWithoutWhitespaces.lowercased())")
+    try filesToReplaceContent.forEach { swiftFilePath in
+        try replaceInFile(fileUrl: swiftFilePath.url, regex: reversedUrlRegex, replacement: "com.\(newNameWithoutWhitespaces.lowercased())/")
+    }
+
+    // replace other
+    try filesToReplaceContent.forEach { swiftFilePath in
+        try replaceInFile(fileUrl: swiftFilePath.url, regex: try Regex(string: oldName), replacement: newName)
+    }
 }
 
 private func replaceInFile(fileUrl: URL, regex: Regex, replacement: String) throws {
@@ -176,10 +209,11 @@ private struct CartfileEntry: CustomStringConvertible {
 
 // MARK: - Tasks
 /// Initializes the project with the given info.
-public func initialize(frameworkName: String) throws {
+public func initialize(frameworkName: String, organization: String) throws {
     try ["README.md", "Logo.png"].forEach { try deleteFile($0) }
     try runAndPrint(bash: "mv README.md.sample README.md")
     try renameProject(from: "NewFrameworkTemplate", to: frameworkName)
+    try renameOrganization(from: "Flinesoft", to: organization, projectName: frameworkName)
     try installDependencies()
 }
 
@@ -218,7 +252,7 @@ public func sortCartfile() throws {
         let cartfileLines = cartfileContents.components(separatedBy: .newlines).filter { !$0.isBlank }
 
         var temporaryComment: String?
-        let cartfileEntries: [CartfileEntry] = cartfileLines.flatMap { line in
+        let cartfileEntries: [CartfileEntry] = cartfileLines.compactMap { line in
             if dependecyLineRegex.matches(line) {
                 let newEntry = CartfileEntry(commentLine: temporaryComment, dependencyDefinitionLine: line)
                 temporaryComment = nil
