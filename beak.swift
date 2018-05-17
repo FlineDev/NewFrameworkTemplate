@@ -1,13 +1,11 @@
 // beak: kareman/SwiftShell @ .upToNextMajor(from: "4.0.1")
-// beak: sharplet/Regex @ .upToNextMajor(from: "1.1.0")
 // beak: kylef/PathKit @ .upToNextMajor(from: "0.9.1")
 // beak: onevcat/Rainbow @ .upToNextMajor(from: "3.1.2")
-// beak: Flinesoft/HandySwift @ .upToNextMajor(from: "2.5.0")
+// beak: Flinesoft/HandySwift @ .upToNextMajor(from: "2.6.0")
 
 import HandySwift
 import Foundation
 import SwiftShell
-import Regex
 import PathKit
 import Rainbow
 
@@ -35,7 +33,7 @@ private func renameProject(from oldName: String, to newName: String) throws {
     ].map { Path($0) }
 
     try filesToReplaceContent.forEach { swiftFilePath in
-        try replaceInFile(fileUrl: swiftFilePath.url, regex: try Regex(string: oldName), replacement: newName)
+        try replaceInFile(fileUrl: swiftFilePath.url, regex: try Regex(oldName), replacement: newName)
     }
 
     try supportedPlatforms.forEach { platform in
@@ -66,27 +64,27 @@ private func renameOrganization(from oldName: String, to newName: String, projec
     let oldNameWithoutWhitespaces = oldName.components(separatedBy: .whitespaces).joined()
     let newNameWithoutWhitespaces = newName.components(separatedBy: .whitespaces).joined()
 
-    let urlRegex = try Regex(string: "\(oldNameWithoutWhitespaces)/")
+    let urlRegex = try Regex("\(oldNameWithoutWhitespaces)/")
     try filesToReplaceContent.forEach { swiftFilePath in
         try replaceInFile(fileUrl: swiftFilePath.url, regex: urlRegex, replacement: "\(newNameWithoutWhitespaces)/")
     }
 
     // replace reversed URl appearances
-    let reversedUrlRegex = try Regex(string: "com.\(oldNameWithoutWhitespaces.lowercased())")
+    let reversedUrlRegex = try Regex("com.\(oldNameWithoutWhitespaces.lowercased())")
     try filesToReplaceContent.forEach { swiftFilePath in
         try replaceInFile(fileUrl: swiftFilePath.url, regex: reversedUrlRegex, replacement: "com.\(newNameWithoutWhitespaces.lowercased())")
     }
 
     // replace other
     try filesToReplaceContent.forEach { swiftFilePath in
-        try replaceInFile(fileUrl: swiftFilePath.url, regex: try Regex(string: oldName), replacement: newName)
+        try replaceInFile(fileUrl: swiftFilePath.url, regex: try Regex(oldName), replacement: newName)
     }
 }
 
 private func replaceInFile(fileUrl: URL, regex: Regex, replacement: String) throws {
     print("Replacing occurences of regex '\(regex)' in file '\(fileUrl.lastPathComponent)' with '\(replacement)' ...", level: .info)
     var content = try String(contentsOf: fileUrl, encoding: .utf8)
-    content.replaceAll(matching: regex, with: replacement)
+    content = regex.replacingMatches(in: content, with: replacement)
     try content.write(to: fileUrl, atomically: false, encoding: .utf8)
 }
 
@@ -116,7 +114,7 @@ private func print(_ message: String, level: PrintLevel) {
     }
 }
 
-private let semanticVersionRegex = Regex("(\\d+)\\.(\\d+)\\.(\\d+)\\s")
+private let semanticVersionRegex = try Regex("(\\d+)\\.(\\d+)\\.(\\d+)\\s")
 
 private struct SemanticVersion: Comparable, CustomStringConvertible {
     let major: Int
@@ -155,7 +153,7 @@ private func appendEntryToCartfile(_ tagline: String?, _ githubSubpath: String, 
         guard version != "latest" else {
             let tagListCommand = "git ls-remote --tags https://github.com/\(githubSubpath).git"
             let commandOutput = run(bash: tagListCommand).stdout
-            let availableSemanticVersions = semanticVersionRegex.allMatches(in: commandOutput).map { SemanticVersion($0.matchedString) }
+            let availableSemanticVersions = semanticVersionRegex.matches(in: commandOutput).map { SemanticVersion($0.string) }
             guard !availableSemanticVersions.isEmpty else {
                 print("Dependency '\(githubSubpath)' has no tagged versions.", level: .error)
                 fatalError()
@@ -175,7 +173,7 @@ private func appendEntryToCartfile(_ tagline: String?, _ githubSubpath: String, 
 }
 
 private func fetchGitHubTagline(subpath: String) throws -> String? {
-    let taglineRegex = Regex("<title>[^\\:]+\\: (.*)<\\/title>")
+    let taglineRegex = try Regex("<title>[^\\:]+\\: (.*)<\\/title>")
     let url = URL(string: "https://github.com/\(subpath)")!
     let html = try String(contentsOf: url, encoding: .utf8)
     guard let firstMatch = taglineRegex.firstMatch(in: html) else { return nil }
@@ -245,7 +243,7 @@ public func addDependency(github githubSubpath: String, version: String = "lates
 
 /// Sorts the contents of Cartfile and Cartfile.private.
 public func sortCartfile() throws {
-    let dependecyLineRegex = Regex("#? ?(?:github|binary|git) \"[^\"]+/([^\"]+)\".*")
+    let dependecyLineRegex = try Regex("#? ?(?:github|binary|git) \"[^\"]+/([^\"]+)\".*")
 
     try ["Cartfile", "Cartfile.private"].forEach { fileName in
         let cartfileContents = try String(contentsOfFile: fileName)
