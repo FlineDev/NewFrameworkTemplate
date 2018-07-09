@@ -1,7 +1,7 @@
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/Flinesoft/NewFrameworkTemplate/stable/Logo.png"
-      width=600 height=167>
+      width=600>
 </p>
 
 <p align="center">
