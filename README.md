@@ -64,7 +64,7 @@ To use this framework, you need to install a few tools:
 Here's a few simple steps on how you can use this project to kick-start your next framework project:
 
 1. **Clone this repo** to your own Git server or **download as ZIP file** (beware)
-2. Run `beak run initialize --frameworkName YourFrameworkName --organization "Your Organization"` to **initialize the project**
+2. Run `beak run initialize --projectName YourFrameworkName --organization "Your Organization"` to **initialize the project**
 3. Set the the **Development Team** to yours (at least in the test targets)
 4. Update the **author and social_media_url** entires in the .podspec file
 

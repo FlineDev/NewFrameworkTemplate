@@ -207,11 +207,11 @@ private struct CartfileEntry: CustomStringConvertible {
 
 // MARK: - Tasks
 /// Initializes the project with the given info.
-public func initialize(frameworkName: String, organization: String) throws {
+public func initialize(projectName: String, organization: String) throws {
     try ["README.md", "Logo.png"].forEach { try deleteFile($0) }
     try runAndPrint(bash: "mv README.md.sample README.md")
-    try renameProject(from: "NewFrameworkTemplate", to: frameworkName)
-    try renameOrganization(from: "Flinesoft", to: organization, projectName: frameworkName)
+    try renameProject(from: "NewFrameworkTemplate", to: projectName)
+    try renameOrganization(from: "Flinesoft", to: organization, projectName: projectName)
     try installDependencies()
 }
 
