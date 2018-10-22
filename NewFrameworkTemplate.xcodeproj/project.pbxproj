@@ -92,6 +92,9 @@
 		000E616F2086425500C0638C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0085926E2046FD1B00AB529F /* beak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beak.swift; sourceTree = "<group>"; };
 		82056067217DD00800E23A81 /* .projlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .projlint.yml; sourceTree = "<group>"; };
+		820560AA217DE92600E23A81 /* CODE_OF_CONDUCT.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CODE_OF_CONDUCT.md; sourceTree = "<group>"; };
+		820560AB217DE93100E23A81 /* CONTRIBUTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
+		820560AD217DE95A00E23A81 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		A102BD3E1F02355A000C6B38 /* NewFrameworkTemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NewFrameworkTemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A102BD471F02355A000C6B38 /* NewFrameworkTemplate-iOS-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NewFrameworkTemplate-iOS-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A102BD5D1F023573000C6B38 /* NewFrameworkTemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NewFrameworkTemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -274,6 +277,9 @@
 				A102BDB71F023A7D000C6B38 /* Cartfile */,
 				A102BDB81F023A8A000C6B38 /* Cartfile.private */,
 				A102BDB91F023A9A000C6B38 /* Cartfile.resolved */,
+				820560AD217DE95A00E23A81 /* CHANGELOG.md */,
+				820560AA217DE92600E23A81 /* CODE_OF_CONDUCT.md */,
+				820560AB217DE93100E23A81 /* CONTRIBUTING.md */,
 				A15AD1241F0262D1004D7ED3 /* LICENSE */,
 				A15AD1201F0240C9004D7ED3 /* NewFrameworkTemplate.podspec */,
 				A15AD1211F02447E004D7ED3 /* Package.swift */,
