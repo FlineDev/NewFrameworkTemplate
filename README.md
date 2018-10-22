@@ -14,14 +14,14 @@
              alt="codebeat badge">
     </a>
     <a href="https://github.com/Flinesoft/NewFrameworkTemplate/releases">
-        <img src="https://img.shields.io/badge/Version-1.0.0-blue.svg"
-             alt="Version: 1.0.0">
+        <img src="https://img.shields.io/badge/Version-0.1.0-blue.svg"
+             alt="Version: 0.1.0">
     </a>
-    <img src="https://img.shields.io/badge/Swift-4.0-FFAC45.svg"
-         alt="Swift: 4.0">
+    <img src="https://img.shields.io/badge/Swift-4.2-FFAC45.svg"
+         alt="Swift: 4.2">
     <img src="https://img.shields.io/badge/Platforms-iOS%20%7C%20macOS%20%7C%20tvOS%20%7C%20watchOS-FF69B4.svg"
         alt="Platforms: iOS | macOS | tvOS | watchOS">
-    <a href="https://github.com/Flinesoft/NewFrameworkTemplate/blob/stable/LICENSE.md">
+    <a href="https://github.com/Flinesoft/NewFrameworkTemplate/blob/stable/LICENSE">
         <img src="https://img.shields.io/badge/License-MIT-lightgrey.svg"
               alt="License: MIT">
     </a>
@@ -47,7 +47,7 @@ Specifically this is what "battries included" currently means:
 - SwiftLint is preconfigured to help embrace a unified code style
 - Support for [Carthage](https://github.com/Carthage/Carthage), [CocoaPods](https://github.com/CocoaPods/CocoaPods) and [Swift Package Manager](https://github.com/apple/swift-package-manager) is setup
 - A `README.md` file is setup with appropriate sections
-- A `LICENSE.md` file is setup with MIT license preconfigured
+- A `LICENSE` file is setup with MIT license preconfigured
 
 ## Prerequisites
 
@@ -66,7 +66,7 @@ Here's a few simple steps on how you can use this project to kick-start your nex
 1. **Clone this repo** to your own Git server or **download as ZIP file** (beware)
 2. Run `beak run initialize --projectName YourFrameworkName --organization "Your Organization"` to **initialize the project**
 3. Set the the **Development Team** to yours (at least in the test targets)
-4. Update the **author and social_media_url** entires in the .podspec file
+4. Update the **author and social_media_url** entries in the .podspec file
 
 Additional options you probably want to check:
 
