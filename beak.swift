@@ -21,14 +21,15 @@ private func deleteFile(_ fileName: String) throws {
 private func renameProject(from oldName: String, to newName: String) throws {
     var filesToReplaceContent: [Path] = [
         Path(oldName + ".xcodeproj/project.pbxproj"),
-        Path(oldName + ".xcodeproj/project.xcworkspace/contents.xcworkspacedata")
+        Path(oldName + ".xcodeproj/project.xcworkspace/contents.xcworkspacedata"),
+        Path(".projlint.yml")
     ]
 
     filesToReplaceContent += supportedPlatforms.map { Path(oldName + ".xcodeproj/xcshareddata/xcschemes/\(oldName) \($0).xcscheme") }
-    filesToReplaceContent += Path.glob("Sources/**/*.swift")
+    filesToReplaceContent += Path.glob("Frameworks/**/*.swift")
     filesToReplaceContent += Path.glob("Tests/**/*.swift")
     filesToReplaceContent += [
-        "README.md", "Package.swift", "Sources/Supporting Files/\(oldName).h", "UsageExamples.playground/Contents.swift",
+        "README.md", "Package.swift", "Frameworks/SupportingFiles/\(oldName).h", "UsageExamples.playground/Contents.swift",
         "\(oldName).xcworkspace/contents.xcworkspacedata", "\(oldName).podspec"
     ].map { Path($0) }
 
@@ -45,19 +46,23 @@ private func renameProject(from oldName: String, to newName: String) throws {
     try runAndPrint(bash: "mv \(oldName).xcodeproj/ \(newName).xcodeproj/")
     try runAndPrint(bash: "mv \(oldName).xcworkspace/ \(newName).xcworkspace/")
     try runAndPrint(bash: "mv \(oldName).podspec \(newName).podspec")
-    try runAndPrint(bash: "mv Sources/Supporting\\ Files/\(oldName).h Sources/Supporting\\ Files/\(newName).h")
+    try runAndPrint(bash: "mv Frameworks/SupportingFiles/\(oldName).h Frameworks/SupportingFiles/\(newName).h")
+    try runAndPrint(bash: "mv Frameworks/\(oldName) Frameworks/\(newName)")
+    try runAndPrint(bash: "mv Tests/\(oldName)Tests Tests/\(newName)Tests")
 }
 
 private func renameOrganization(from oldName: String, to newName: String, projectName: String) throws {
     var filesToReplaceContent: [Path] = [
-        Path("LICENSE.md"),
+        Path("LICENSE"),
         Path("README.md"),
         Path("\(projectName).podspec"),
         Path("\(projectName).xcodeproj/project.pbxproj"),
-        Path("Sources/Supporting Files/\(projectName).h")
+        Path("Frameworks/SupportingFiles/\(projectName).h"),
+        Path(".swiftlint.yml"),
+        Path(".projlint.yml")
     ]
 
-    filesToReplaceContent += Path.glob("Sources/**/*.swift")
+    filesToReplaceContent += Path.glob("Frameworks/**/*.swift")
     filesToReplaceContent += Path.glob("Tests/**/*.swift")
 
     // replace normal URL appearances
@@ -212,7 +217,7 @@ public func initialize(projectName: String, organization: String) throws {
     try runAndPrint(bash: "mv README.md.sample README.md")
     try renameProject(from: "NewFrameworkTemplate", to: projectName)
     try renameOrganization(from: "Flinesoft", to: organization, projectName: projectName)
-    try installDependencies()
+    try updateDependencies()
 }
 
 /// Installs project dependencies.
