@@ -5,12 +5,12 @@
 </p>
 
 <p align="center">
-    <a href="https://www.bitrise.io/app/038c2bd2f019b48d">
-        <img src="https://www.bitrise.io/app/038c2bd2f019b48d/status.svg?token=Ba6FS-bhfldSuBPbcGAxaA&branch=stable"
+    <a href="https://app.bitrise.io/app/3a9e984eba8c73b8">
+        <img src="https://app.bitrise.io/app/3a9e984eba8c73b8/status.svg?token=0njkrtWxlHnbM9cP4Iwi7g"
              alt="Build Status">
-    </a>
+    </a>    
     <a href="https://codebeat.co/projects/github-com-flinesoft-newframeworktemplate-stable">
-        <img src="https://codebeat.co/badges/8decb589-186b-4642-bdce-310bbd238ff2"
+        <img src="https://codebeat.co/badges/b50c9729-5b5a-4ac8-b05d-bf4ae7827ac6"
              alt="codebeat badge">
     </a>
     <a href="https://github.com/Flinesoft/NewFrameworkTemplate/releases">
