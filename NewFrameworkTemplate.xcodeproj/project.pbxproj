@@ -13,12 +13,6 @@
 		A102BDB31F0238E8000C6B38 /* ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A102BDB01F0238BD000C6B38 /* ExampleTests.swift */; };
 		A102BDB41F0238E8000C6B38 /* ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A102BDB01F0238BD000C6B38 /* ExampleTests.swift */; };
 		A102BDB51F0238E9000C6B38 /* ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A102BDB01F0238BD000C6B38 /* ExampleTests.swift */; };
-		A102BDCF1F023C73000C6B38 /* Nimble.framework in Carthage */ = {isa = PBXBuildFile; fileRef = A102BDCE1F023C52000C6B38 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A102BDD01F023C73000C6B38 /* Quick.framework in Carthage */ = {isa = PBXBuildFile; fileRef = A102BDCD1F023C51000C6B38 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A102BDD11F023C7D000C6B38 /* Nimble.framework in Carthage */ = {isa = PBXBuildFile; fileRef = A102BDCB1F023C4A000C6B38 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A102BDD21F023C7D000C6B38 /* Quick.framework in Carthage */ = {isa = PBXBuildFile; fileRef = A102BDCC1F023C4A000C6B38 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A102BDD31F023C81000C6B38 /* Nimble.framework in Carthage */ = {isa = PBXBuildFile; fileRef = A102BDC91F023C3E000C6B38 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A102BDD41F023C81000C6B38 /* Quick.framework in Carthage */ = {isa = PBXBuildFile; fileRef = A102BDCA1F023C3E000C6B38 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A102BDFF1F023E32000C6B38 /* NewFrameworkTemplate.h in Headers */ = {isa = PBXBuildFile; fileRef = A102BDFE1F023E13000C6B38 /* NewFrameworkTemplate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A102BE001F023E33000C6B38 /* NewFrameworkTemplate.h in Headers */ = {isa = PBXBuildFile; fileRef = A102BDFE1F023E13000C6B38 /* NewFrameworkTemplate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A102BE011F023E33000C6B38 /* NewFrameworkTemplate.h in Headers */ = {isa = PBXBuildFile; fileRef = A102BDFE1F023E13000C6B38 /* NewFrameworkTemplate.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -56,8 +50,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A102BDD31F023C81000C6B38 /* Nimble.framework in Carthage */,
-				A102BDD41F023C81000C6B38 /* Quick.framework in Carthage */,
 			);
 			name = Carthage;
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,8 +60,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A102BDD11F023C7D000C6B38 /* Nimble.framework in Carthage */,
-				A102BDD21F023C7D000C6B38 /* Quick.framework in Carthage */,
 			);
 			name = Carthage;
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,8 +70,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A102BDCF1F023C73000C6B38 /* Nimble.framework in Carthage */,
-				A102BDD01F023C73000C6B38 /* Quick.framework in Carthage */,
 			);
 			name = Carthage;
 			runOnlyForDeploymentPostprocessing = 0;
@@ -106,19 +94,13 @@
 		A102BDB01F0238BD000C6B38 /* ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTests.swift; sourceTree = "<group>"; };
 		A102BDB21F0238BD000C6B38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A102BDB71F023A7D000C6B38 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
-		A102BDB81F023A8A000C6B38 /* Cartfile.private */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.private; sourceTree = "<group>"; };
 		A102BDB91F023A9A000C6B38 /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
-		A102BDC91F023C3E000C6B38 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
-		A102BDCA1F023C3E000C6B38 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
-		A102BDCB1F023C4A000C6B38 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
-		A102BDCC1F023C4A000C6B38 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
-		A102BDCD1F023C51000C6B38 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/tvOS/Quick.framework; sourceTree = "<group>"; };
-		A102BDCE1F023C52000C6B38 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/tvOS/Nimble.framework; sourceTree = "<group>"; };
 		A102BDD51F023CAA000C6B38 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		A102BDFE1F023E13000C6B38 /* NewFrameworkTemplate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewFrameworkTemplate.h; sourceTree = "<group>"; };
 		A15AD1201F0240C9004D7ED3 /* NewFrameworkTemplate.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = NewFrameworkTemplate.podspec; sourceTree = "<group>"; };
 		A15AD1211F02447E004D7ED3 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		A15AD1241F0262D1004D7ED3 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		A1F167732215A5260094788D /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,11 +253,11 @@
 		A102BDB61F023A6D000C6B38 /* RootFiles */ = {
 			isa = PBXGroup;
 			children = (
+				A1F167732215A5260094788D /* .gitignore */,
 				82056067217DD00800E23A81 /* .projlint.yml */,
 				A102BDD51F023CAA000C6B38 /* .swiftlint.yml */,
 				0085926E2046FD1B00AB529F /* beak.swift */,
 				A102BDB71F023A7D000C6B38 /* Cartfile */,
-				A102BDB81F023A8A000C6B38 /* Cartfile.private */,
 				A102BDB91F023A9A000C6B38 /* Cartfile.resolved */,
 				820560AD217DE95A00E23A81 /* CHANGELOG.md */,
 				820560AA217DE92600E23A81 /* CODE_OF_CONDUCT.md */,
@@ -349,8 +331,6 @@
 		A102BDC61F023C27000C6B38 /* tvOS */ = {
 			isa = PBXGroup;
 			children = (
-				A102BDCE1F023C52000C6B38 /* Nimble.framework */,
-				A102BDCD1F023C51000C6B38 /* Quick.framework */,
 			);
 			name = tvOS;
 			sourceTree = "<group>";
@@ -358,8 +338,6 @@
 		A102BDC71F023C2B000C6B38 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				A102BDC91F023C3E000C6B38 /* Nimble.framework */,
-				A102BDCA1F023C3E000C6B38 /* Quick.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
@@ -367,8 +345,6 @@
 		A102BDC81F023C2F000C6B38 /* macOS */ = {
 			isa = PBXGroup;
 			children = (
-				A102BDCB1F023C4A000C6B38 /* Nimble.framework */,
-				A102BDCC1F023C4A000C6B38 /* Quick.framework */,
 			);
 			name = macOS;
 			sourceTree = "<group>";
@@ -420,7 +396,6 @@
 				A102BD3B1F02355A000C6B38 /* Headers */,
 				A102BD3C1F02355A000C6B38 /* Resources */,
 				A102BDD61F023D4A000C6B38 /* SwiftLint */,
-				82056068217DD23800E23A81 /* ProjLint */,
 			);
 			buildRules = (
 			);
@@ -459,7 +434,6 @@
 				A102BD5A1F023573000C6B38 /* Headers */,
 				A102BD5B1F023573000C6B38 /* Resources */,
 				A102BDD71F023D5B000C6B38 /* SwiftLint */,
-				82056069217DD24800E23A81 /* ProjLint */,
 			);
 			buildRules = (
 			);
@@ -498,7 +472,6 @@
 				A102BD761F023582000C6B38 /* Headers */,
 				A102BD771F023582000C6B38 /* Resources */,
 				A102BDD81F023D6C000C6B38 /* SwiftLint */,
-				8205606A217DD25500E23A81 /* ProjLint */,
 			);
 			buildRules = (
 			);
@@ -537,7 +510,6 @@
 				A102BD921F02358E000C6B38 /* Headers */,
 				A102BD931F02358E000C6B38 /* Resources */,
 				A102BDD91F023D80000C6B38 /* SwiftLint */,
-				8205606B217DD26700E23A81 /* ProjLint */,
 			);
 			buildRules = (
 			);
@@ -555,7 +527,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = Flinesoft;
 				TargetAttributes = {
 					A102BD3D1F02355A000C6B38 = {
@@ -662,78 +634,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		82056068217DD23800E23A81 /* ProjLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = ProjLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if [ \"${CONFIGURATION}\" = \"Debug\" ]; then\n    if which projlint > /dev/null; then\n        projlint lint --xcode --timeout 2 --ignore-network-errors\n    else\n        echo \"warning: ProjLint not installed, download it from https://github.com/JamitLabs/ProjLint\"\n    fi\nfi\n";
-		};
-		82056069217DD24800E23A81 /* ProjLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = ProjLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if [ \"${CONFIGURATION}\" = \"Debug\" ]; then\n    if which projlint > /dev/null; then\n        projlint lint --xcode --timeout 2 --ignore-network-errors\n    else\n        echo \"warning: ProjLint not installed, download it from https://github.com/JamitLabs/ProjLint\"\n    fi\nfi\n";
-		};
-		8205606A217DD25500E23A81 /* ProjLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = ProjLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if [ \"${CONFIGURATION}\" = \"Debug\" ]; then\n    if which projlint > /dev/null; then\n        projlint lint --xcode --timeout 2 --ignore-network-errors\n    else\n        echo \"warning: ProjLint not installed, download it from https://github.com/JamitLabs/ProjLint\"\n    fi\nfi\n";
-		};
-		8205606B217DD26700E23A81 /* ProjLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = ProjLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if [ \"${CONFIGURATION}\" = \"Debug\" ]; then\n    if which projlint > /dev/null; then\n        projlint lint --xcode --timeout 2 --ignore-network-errors\n    else\n        echo \"warning: ProjLint not installed, download it from https://github.com/JamitLabs/ProjLint\"\n    fi\nfi\n";
-		};
 		A102BDD61F023D4A000C6B38 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1104,7 +1004,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 8DHP3ZYQ2N;
+				DEVELOPMENT_TEAM = 767S6EFMJ8;
 				INFOPLIST_FILE = Tests/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
@@ -1119,7 +1019,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 8DHP3ZYQ2N;
+				DEVELOPMENT_TEAM = 767S6EFMJ8;
 				INFOPLIST_FILE = Tests/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
