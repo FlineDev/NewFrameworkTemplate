@@ -6,7 +6,7 @@
 
 <p align="center">
     <a href="https://app.bitrise.io/app/3a9e984eba8c73b8">
-        <img src="https://app.bitrise.io/app/3a9e984eba8c73b8/status.svg?token=0njkrtWxlHnbM9cP4Iwi7g"
+        <img src="https://app.bitrise.io/app/3a9e984eba8c73b8/status.svg?token=0njkrtWxlHnbM9cP4Iwi7g&branch=stable"
              alt="Build Status">
     </a>    
     <a href="https://codebeat.co/projects/github-com-flinesoft-newframeworktemplate-stable">
