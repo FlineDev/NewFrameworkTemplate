@@ -25,11 +25,21 @@
         <img src="https://img.shields.io/badge/License-MIT-lightgrey.svg"
               alt="License: MIT">
     </a>
+    <br />
+    <a href="https://paypal.me/Dschee/5EUR">
+        <img src="https://img.shields.io/badge/PayPal-Donate-orange.svg"
+             alt="PayPal: Donate">
+    </a>
+    <a href="https://patreon.com/Dschee">
+        <img src="https://img.shields.io/badge/Patreon-Become a patron-orange.svg"
+             alt="Patreon: Become a patron">
+    </a>
 </p>
 
 <p align="center">
     <a href="#installation">Installation</a>
   • <a href="#usage">Usage</a>
+  • <a href="#donation">Donation</a>
   • <a href="https://github.com/Flinesoft/NewFrameworkTemplate/issues">Issues</a>
   • <a href="#contributing">Contributing</a>
   • <a href="#license">License</a>
@@ -74,6 +84,13 @@ Additional options you probably want to check:
 6. Configure the **minimum deployment target** per target (the latest major version by default)
 
 That's it! Start coding. 🎉 😊
+
+
+## Donation
+
+NewFrameworkTemplate was brought to you by [Cihat Gündüz](https://github.com/Dschee) in his free time. If you want to thank me and support the development of this project, please make a small donation on [PayPal](https://paypal.me/Dschee/5EUR). In case you also like my other [open source contributions](https://github.com/Flinesoft) and [articles](https://medium.com/@Dschee), please consider motivating me by becoming a patron on [Patreon](https://www.patreon.com/Dschee).
+
+Thank you very much for any donation, it really helps out a lot! 💯
 
 
 ## Contributing
